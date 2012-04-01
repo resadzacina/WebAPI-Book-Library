@@ -1,0 +1,23 @@
+﻿[Exception][Txtr.Platform.Data.WebService.Web] 4/1/2012 10:29:09 AM: Exception in BooksRepository.FindAll - Exception [System.Data.MetadataException] \n Message[Schema specified is not valid. Errors: 
+The relationship 'Txtr.Platform.Data.DomainModel.Model.FK__book__format__1FCDBCEB' was not loaded because the type 'Txtr.Platform.Data.DomainModel.Model.Format' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Books' does not exist on the type 'Txtr.Platform.Data.DomainModel.Model.Format'.
+
+
+The relationship 'Txtr.Platform.Data.DomainModel.Model.FK__book__genre__20C1E124' was not loaded because the type 'Txtr.Platform.Data.DomainModel.Model.Genre' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Books' does not exist on the type 'Txtr.Platform.Data.DomainModel.Model.Genre'.
+
+
+The relationship 'Txtr.Platform.Data.DomainModel.Model.FK__book__owner__22AA2996' was not loaded because the type 'Txtr.Platform.Data.DomainModel.Model.User' is not available.
+The following information may be useful in resolving the previous error:
+The required property 'Books' does not exist on the type 'Txtr.Platform.Data.DomainModel.Model.User'.
+
+] \n Source[System.Data.Entity] \n StackTrace[   at System.Data.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(ObjectItemCollection objectItemCollection, Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   at System.Data.Metadata.Edm.ObjectItemCollection.ImplicitLoadAssemblyForType(Type type, EdmItemCollection edmItemCollection)
+   at System.Data.Metadata.Edm.MetadataWorkspace.ImplicitLoadAssemblyForType(Type type, Assembly callingAssembly)
+   at System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Objects.ObjectContext.GetEntitySetForNameAndType(String entitySetName, Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.CreateObjectSet[TEntity](String entitySetName)
+   at Txtr.Platform.Data.Provider.PocoContext.get_Books() in c:\Development\Txtr\Txtr.Platform.Data.Provider\PocoContext.cs:line 32
+   at Txtr.Platform.Data.Provider.Repository.BooksRepository.FindAll() in c:\Development\Txtr\Txtr.Platform.Data.Provider\Repository\BooksRepository.cs:line 29]

@@ -1,0 +1,10 @@
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Txtr.Platform.Logging.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Txtr.Platform.Logging.pdb
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Development\Txtr\Txtr.Platform.Logging\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Development\Txtr\Txtr.Platform.Logging\obj\Debug\Txtr.Platform.Logging.dll
+C:\Development\Txtr\Txtr.Platform.Logging\obj\Debug\Txtr.Platform.Logging.pdb

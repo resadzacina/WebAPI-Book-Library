@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BooksDatabaseModelStoreContainer" CdmEntityContainer="BooksDatabaseEntities">
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.Author">
+        <MappingFragment StoreEntitySet="Authors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CountryISO" ColumnName="CountryISO" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="Pages" ColumnName="Pages" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          <ScalarProperty Name="BorrowedDate" ColumnName="BorrowedDate" />
+          <ScalarProperty Name="BorrowerID" ColumnName="BorrowerID" />
+          <ScalarProperty Name="Extra" ColumnName="Extra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="ISO" ColumnName="ISO" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PrintableName" ColumnName="PrintableName" />
+          <ScalarProperty Name="ISO3" ColumnName="ISO3" />
+          <ScalarProperty Name="NumCode" ColumnName="NumCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formats">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.Format">
+        <MappingFragment StoreEntitySet="Formats">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.Genre">
+        <MappingFragment StoreEntitySet="Genres">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Txtr.Platform.Data.DomainModel.Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FavouriteCategory" ColumnName="FavouriteCategory" />
+          <ScalarProperty Name="FavouriteBook" ColumnName="FavouriteBook" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="CountryISO" ColumnName="CountryISO" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

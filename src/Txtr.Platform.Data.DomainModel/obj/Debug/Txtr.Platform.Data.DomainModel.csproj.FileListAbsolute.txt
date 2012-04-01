@@ -1,0 +1,4 @@
+C:\Development\Txtr\Txtr.Platform.Data.DomainModel\bin\Debug\Txtr.Platform.Data.DomainModel.dll
+C:\Development\Txtr\Txtr.Platform.Data.DomainModel\bin\Debug\Txtr.Platform.Data.DomainModel.pdb
+C:\Development\Txtr\Txtr.Platform.Data.DomainModel\obj\Debug\Txtr.Platform.Data.DomainModel.dll
+C:\Development\Txtr\Txtr.Platform.Data.DomainModel\obj\Debug\Txtr.Platform.Data.DomainModel.pdb

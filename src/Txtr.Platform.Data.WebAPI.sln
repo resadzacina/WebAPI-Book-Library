@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Data.Core", "Txtr.Platform.Data.Core\Txtr.Platform.Data.Core.csproj", "{ACFFCF3F-790E-42C6-B76A-407246C8E567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Data.DomainModel", "Txtr.Platform.Data.DomainModel\Txtr.Platform.Data.DomainModel.csproj", "{CA9E6C27-D056-45AF-8E71-F65DD281B078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Data.Provider", "Txtr.Platform.Data.Provider\Txtr.Platform.Data.Provider.csproj", "{C7F4AF4D-04B3-4F80-876B-A324669BD6C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Data.Services", "Txtr.Platform.Data.Services\Txtr.Platform.Data.Services.csproj", "{4843019B-9ADA-4E92-B8BF-314C4CD1CB74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Logging", "Txtr.Platform.Logging\Txtr.Platform.Logging.csproj", "{53C9F466-56BB-483F-AA6B-BAD20CCF8A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Unity", "Txtr.Platform.Unity\Txtr.Platform.Unity.csproj", "{AA16B484-C783-4D1E-A03A-ABEFF2E758E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Txtr.Platform.Data.WebService.Web", "Txtr.Platform.Data.WebService.Web\Txtr.Platform.Data.WebService.Web\Txtr.Platform.Data.WebService.Web.csproj", "{C57EA2B8-77C0-4BA5-8552-D452D11A6C5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4843019B-9ADA-4E92-B8BF-314C4CD1CB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4843019B-9ADA-4E92-B8BF-314C4CD1CB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4843019B-9ADA-4E92-B8BF-314C4CD1CB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4843019B-9ADA-4E92-B8BF-314C4CD1CB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C9F466-56BB-483F-AA6B-BAD20CCF8A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C9F466-56BB-483F-AA6B-BAD20CCF8A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C9F466-56BB-483F-AA6B-BAD20CCF8A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C9F466-56BB-483F-AA6B-BAD20CCF8A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA16B484-C783-4D1E-A03A-ABEFF2E758E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA16B484-C783-4D1E-A03A-ABEFF2E758E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA16B484-C783-4D1E-A03A-ABEFF2E758E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA16B484-C783-4D1E-A03A-ABEFF2E758E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFFCF3F-790E-42C6-B76A-407246C8E567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFFCF3F-790E-42C6-B76A-407246C8E567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFFCF3F-790E-42C6-B76A-407246C8E567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFFCF3F-790E-42C6-B76A-407246C8E567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57EA2B8-77C0-4BA5-8552-D452D11A6C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57EA2B8-77C0-4BA5-8552-D452D11A6C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57EA2B8-77C0-4BA5-8552-D452D11A6C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57EA2B8-77C0-4BA5-8552-D452D11A6C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F4AF4D-04B3-4F80-876B-A324669BD6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F4AF4D-04B3-4F80-876B-A324669BD6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F4AF4D-04B3-4F80-876B-A324669BD6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F4AF4D-04B3-4F80-876B-A324669BD6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA9E6C27-D056-45AF-8E71-F65DD281B078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9E6C27-D056-45AF-8E71-F65DD281B078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9E6C27-D056-45AF-8E71-F65DD281B078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9E6C27-D056-45AF-8E71-F65DD281B078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

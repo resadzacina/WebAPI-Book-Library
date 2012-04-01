@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Web API</title>
+    <link href="@Url.Content( "~/Content/Site.css" )" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content( "~/Scripts/modernizr-2.0.6-development-only.js" )" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title"><a href="/">Simple Books Library Web API</a></p>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h2>The API has been built using the following platforms & technologies:</h2>
+                </hgroup>
+                <ul>
+                    <li>.NET framework 4.5</li>
+                    <li>ASP.NET MVC 4</li>
+                    <li>WEB API</li>
+                    <li>OData</li>
+                    <li>Unity - Dependency Injection Container</li>
+                    <li>Entity Framework ORM + POCO objects</li>
+                </ul>
+                <hgroup class="title">
+                    <h2>The following architecture & patterns have been used in the project:</h2>
+                </hgroup>
+                <ul>
+                    <li>MVC - Presentation layer</li>
+                    <li>Repository - Data access layer</li>
+                    <li>Three layered architecture</li>
+                </ul>
+                <hgroup class="title">
+                    <h2>Usage</h2>
+                </hgroup>
+                <ul>
+                    <li>GET <span>http://localhost:[port]/api/books</span><span><strong>- Retrieves a list
+                        of all books</strong></span></li>
+                    <li>GET <span>http://localhost:[port]/api/books?$top=2&orderby=Title</span><span><strong>
+                        - Execute a query by specifying the number of items and ordering</strong></span>
+                    </li>
+                    <li>GET <span> http://localhost:[port]/api/books?$filter=Publisher eq "Heinemann"</span><span><strong>
+                        - Get all books by publisher name</strong></span>
+                    </li>
+                    <li>GET <span>http://localhost:[port]/api/books/1 </span><span><strong>- Retrieves a
+                        single book by ID</strong></span></li>
+                    <li>POST<span> http://localhost:[port]/api/books/ </span><span><strong>- Posting a JSON
+                        or XML serialized object to this route inserts a new record</strong></span></li>
+                    <li>PUT <span>http://localhost:[port]/api/books/1</span><span><strong>- Put a JSON or
+                        XML serialized object to this route to update an existing record</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

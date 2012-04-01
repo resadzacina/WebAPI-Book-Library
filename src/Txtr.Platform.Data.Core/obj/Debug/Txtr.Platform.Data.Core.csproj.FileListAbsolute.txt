@@ -1,0 +1,4 @@
+C:\Development\Txtr\Txtr.Platform.Data.Core\bin\Debug\Txtr.Platform.Data.Core.dll
+C:\Development\Txtr\Txtr.Platform.Data.Core\bin\Debug\Txtr.Platform.Data.Core.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Core\obj\Debug\Txtr.Platform.Data.Core.dll
+C:\Development\Txtr\Txtr.Platform.Data.Core\obj\Debug\Txtr.Platform.Data.Core.pdb

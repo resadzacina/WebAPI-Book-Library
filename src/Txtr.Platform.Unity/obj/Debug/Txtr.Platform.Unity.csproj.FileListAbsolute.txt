@@ -1,0 +1,12 @@
+C:\Development\Txtr\Txtr.Platform.Unity\obj\Debug\Txtr.Platform.Unity.csprojResolveAssemblyReference.cache
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Txtr.Platform.Unity.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Txtr.Platform.Unity.pdb
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Txtr.Platform.Data.Core.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Development\Txtr\Txtr.Platform.Unity\bin\Debug\Txtr.Platform.Data.Core.pdb
+C:\Development\Txtr\Txtr.Platform.Unity\obj\Debug\Txtr.Platform.Unity.dll
+C:\Development\Txtr\Txtr.Platform.Unity\obj\Debug\Txtr.Platform.Unity.pdb

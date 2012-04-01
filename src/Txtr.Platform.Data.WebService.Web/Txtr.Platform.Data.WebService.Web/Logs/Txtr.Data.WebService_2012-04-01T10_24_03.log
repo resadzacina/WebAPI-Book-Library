@@ -1,0 +1,5 @@
+﻿[Exception][Txtr.Platform.Data.WebService.Web] 4/1/2012 10:24:03 AM: Exception in BooksRepository.FindAll - Exception [System.InvalidOperationException] \n Message[Mapping and metadata information could not be found for EntityType 'Txtr.Platform.Data.DomainModel.Model.Book'.] \n Source[System.Data.Entity] \n StackTrace[   at System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Objects.ObjectContext.GetEntitySetForNameAndType(String entitySetName, Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.CreateObjectSet[TEntity](String entitySetName)
+   at Txtr.Platform.Data.Provider.PocoContext.get_Books() in c:\Development\Txtr\Txtr.Platform.Data.Provider\PocoContext.cs:line 32
+   at Txtr.Platform.Data.Provider.Repository.BooksRepository.FindAll() in c:\Development\Txtr\Txtr.Platform.Data.Provider\Repository\BooksRepository.cs:line 29]

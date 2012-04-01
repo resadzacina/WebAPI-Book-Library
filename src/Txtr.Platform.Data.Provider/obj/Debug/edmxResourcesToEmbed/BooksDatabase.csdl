@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Txtr.Platform.Data.DomainModel.Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BooksDatabaseEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="Txtr.Platform.Data.DomainModel.Model.Author" />
+    <EntitySet Name="Books" EntityType="Txtr.Platform.Data.DomainModel.Model.Book" />
+    <EntitySet Name="Countries" EntityType="Txtr.Platform.Data.DomainModel.Model.Country" />
+    <EntitySet Name="Formats" EntityType="Txtr.Platform.Data.DomainModel.Model.Format" />
+    <EntitySet Name="Genres" EntityType="Txtr.Platform.Data.DomainModel.Model.Genre" />
+    <EntitySet Name="Users" EntityType="Txtr.Platform.Data.DomainModel.Model.User" />
+    <AssociationSet Name="FK__book__format__1FCDBCEB" Association="Txtr.Platform.Data.DomainModel.Model.FK__book__format__1FCDBCEB">
+      <End Role="Formats" EntitySet="Formats" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__book__genre__20C1E124" Association="Txtr.Platform.Data.DomainModel.Model.FK__book__genre__20C1E124">
+      <End Role="Genres" EntitySet="Genres" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__book__owner__22AA2996" Association="Txtr.Platform.Data.DomainModel.Model.FK__book__owner__22AA2996">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Countries" Association="Txtr.Platform.Data.DomainModel.Model.FK_Users_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CountryISO" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AuthorID" Type="Int32" Nullable="false" />
+    <Property Name="Publisher" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Pages" Type="Int32" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="FormatID" Type="Int32" />
+    <Property Name="GenreID" Type="Int32" />
+    <Property Name="BorrowedDate" Type="DateTime" Precision="3" />
+    <Property Name="BorrowerID" Type="Int32" />
+    <Property Name="Extra" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Format" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__format__1FCDBCEB" FromRole="Books" ToRole="Formats" />
+    <NavigationProperty Name="Genre" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__genre__20C1E124" FromRole="Books" ToRole="Genres" />
+    <NavigationProperty Name="User" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__owner__22AA2996" FromRole="Books" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ISO" />
+    </Key>
+    <Property Name="ISO" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="PrintableName" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="ISO3" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="NumCode" Type="Int16" />
+    <NavigationProperty Name="Users" Relationship="Txtr.Platform.Data.DomainModel.Model.FK_Users_Countries" FromRole="Countries" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Format">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Books" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__format__1FCDBCEB" FromRole="Formats" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Books" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__genre__20C1E124" FromRole="Genres" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FavouriteCategory" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FavouriteBook" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Occupation" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CountryISO" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="LastActivity" Type="DateTime" Precision="3" />
+    <Property Name="Street" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Books" Relationship="Txtr.Platform.Data.DomainModel.Model.FK__book__owner__22AA2996" FromRole="Users" ToRole="Books" />
+    <NavigationProperty Name="Country" Relationship="Txtr.Platform.Data.DomainModel.Model.FK_Users_Countries" FromRole="Users" ToRole="Countries" />
+  </EntityType>
+  <Association Name="FK__book__format__1FCDBCEB">
+    <End Role="Formats" Type="Txtr.Platform.Data.DomainModel.Model.Format" Multiplicity="0..1" />
+    <End Role="Books" Type="Txtr.Platform.Data.DomainModel.Model.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formats">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="FormatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__book__genre__20C1E124">
+    <End Role="Genres" Type="Txtr.Platform.Data.DomainModel.Model.Genre" Multiplicity="0..1" />
+    <End Role="Books" Type="Txtr.Platform.Data.DomainModel.Model.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="GenreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__book__owner__22AA2996">
+    <End Role="Users" Type="Txtr.Platform.Data.DomainModel.Model.User" Multiplicity="0..1" />
+    <End Role="Books" Type="Txtr.Platform.Data.DomainModel.Model.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="BorrowerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Countries">
+    <End Role="Countries" Type="Txtr.Platform.Data.DomainModel.Model.Country" Multiplicity="0..1" />
+    <End Role="Users" Type="Txtr.Platform.Data.DomainModel.Model.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="ISO" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="CountryISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

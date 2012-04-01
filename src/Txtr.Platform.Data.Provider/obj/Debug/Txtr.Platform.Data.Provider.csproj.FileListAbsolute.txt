@@ -1,0 +1,17 @@
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.Provider.dll.config
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.Provider.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.Provider.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Provider\obj\Debug\Txtr.Platform.Data.Provider.csprojResolveAssemblyReference.cache
+C:\Development\Txtr\Txtr.Platform.Data.Provider\obj\Debug\Txtr.Platform.Data.Provider.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\obj\Debug\Txtr.Platform.Data.Provider.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.Core.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.DomainModel.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.Core.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Data.DomainModel.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Logging.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Development\Txtr\Txtr.Platform.Data.Provider\bin\Debug\Txtr.Platform.Logging.pdb

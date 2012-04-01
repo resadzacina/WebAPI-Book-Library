@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BooksDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BooksDatabaseEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="addresses" EntityType="BooksDatabaseModel.address" />
+    <EntitySet Name="authors" EntityType="BooksDatabaseModel.author" />
+    <EntitySet Name="books" EntityType="BooksDatabaseModel.book" />
+    <EntitySet Name="borrowers" EntityType="BooksDatabaseModel.borrower" />
+    <EntitySet Name="Countries" EntityType="BooksDatabaseModel.Country" />
+    <EntitySet Name="employers" EntityType="BooksDatabaseModel.employer" />
+    <EntitySet Name="formats" EntityType="BooksDatabaseModel.format" />
+    <EntitySet Name="genres" EntityType="BooksDatabaseModel.genre" />
+    <EntitySet Name="options" EntityType="BooksDatabaseModel.option" />
+    <EntitySet Name="pages" EntityType="BooksDatabaseModel.page" />
+    <EntitySet Name="Roles" EntityType="BooksDatabaseModel.Role" />
+    <EntitySet Name="roles_pages" EntityType="BooksDatabaseModel.roles_pages" />
+    <EntitySet Name="users" EntityType="BooksDatabaseModel.user" />
+    <AssociationSet Name="FK__book__borrower__21B6055D" Association="BooksDatabaseModel.FK__book__borrower__21B6055D">
+      <End Role="borrower" EntitySet="borrowers" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__book__format__1FCDBCEB" Association="BooksDatabaseModel.FK__book__format__1FCDBCEB">
+      <End Role="format" EntitySet="formats" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__book__genre__20C1E124" Association="BooksDatabaseModel.FK__book__genre__20C1E124">
+      <End Role="genre" EntitySet="genres" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__book__owner__22AA2996" Association="BooksDatabaseModel.FK__book__owner__22AA2996">
+      <End Role="user" EntitySet="users" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="books_genres" Association="BooksDatabaseModel.books_genres">
+      <End Role="book" EntitySet="books" />
+      <End Role="genre" EntitySet="genres" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="address">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="street" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="city" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="country_iso" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="author">
+    <Key>
+      <PropertyRef Name="first_name" />
+      <PropertyRef Name="last_name" />
+    </Key>
+    <Property Name="first_name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="country_iso" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="isbn" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="title" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="author" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="publisher" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="pages" Type="Int32" />
+    <Property Name="year" Type="Int32" />
+    <Property Name="format" Type="Int32" />
+    <Property Name="genre" Type="Int32" />
+    <Property Name="borrower" Type="Int32" />
+    <Property Name="borrowed" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="owner" Type="Int32" />
+    <Property Name="extra" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="borrower1" Relationship="BooksDatabaseModel.FK__book__borrower__21B6055D" FromRole="book" ToRole="borrower" />
+    <NavigationProperty Name="format1" Relationship="BooksDatabaseModel.FK__book__format__1FCDBCEB" FromRole="book" ToRole="format" />
+    <NavigationProperty Name="genre1" Relationship="BooksDatabaseModel.FK__book__genre__20C1E124" FromRole="book" ToRole="genre" />
+    <NavigationProperty Name="user" Relationship="BooksDatabaseModel.FK__book__owner__22AA2996" FromRole="book" ToRole="user" />
+    <NavigationProperty Name="genres" Relationship="BooksDatabaseModel.books_genres" FromRole="book" ToRole="genre" />
+  </EntityType>
+  <EntityType Name="borrower">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="Int32" />
+    <NavigationProperty Name="books" Relationship="BooksDatabaseModel.FK__book__borrower__21B6055D" FromRole="borrower" ToRole="book" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="iso" />
+    </Key>
+    <Property Name="iso" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="printable_name" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="iso3" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="numcode" Type="Int16" />
+  </EntityType>
+  <EntityType Name="employer">
+    <Key>
+      <PropertyRef Name="employer_id" />
+    </Key>
+    <Property Name="employer_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="category" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="format">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="books" Relationship="BooksDatabaseModel.FK__book__format__1FCDBCEB" FromRole="format" ToRole="book" />
+  </EntityType>
+  <EntityType Name="genre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="is_active" Type="Int32" />
+    <NavigationProperty Name="books" Relationship="BooksDatabaseModel.FK__book__genre__20C1E124" FromRole="genre" ToRole="book" />
+    <NavigationProperty Name="books1" Relationship="BooksDatabaseModel.books_genres" FromRole="genre" ToRole="book" />
+  </EntityType>
+  <EntityType Name="option">
+    <Key>
+      <PropertyRef Name="options_id" />
+    </Key>
+    <Property Name="options_id" Type="Int32" Nullable="false" />
+    <Property Name="option_one" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="option_two" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="option_three" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="user_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="display_value" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="modified_date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="display_value" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="active" Type="Int16" Nullable="false" />
+    <Property Name="modified_date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="roles_pages">
+    <Key>
+      <PropertyRef Name="role_fk" />
+      <PropertyRef Name="page_fk" />
+    </Key>
+    <Property Name="role_fk" Type="Int32" Nullable="false" />
+    <Property Name="page_fk" Type="Int32" Nullable="false" />
+    <Property Name="edit_flag" Type="Int32" Nullable="false" />
+    <Property Name="created_date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="fav_cat" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fav_book" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="occupation" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="country_iso" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+    <Property Name="opt_in" Type="Int32" />
+    <Property Name="license_id" Type="Int32" />
+    <NavigationProperty Name="books" Relationship="BooksDatabaseModel.FK__book__owner__22AA2996" FromRole="user" ToRole="book" />
+  </EntityType>
+  <Association Name="FK__book__borrower__21B6055D">
+    <End Role="borrower" Type="BooksDatabaseModel.borrower" Multiplicity="0..1" />
+    <End Role="book" Type="BooksDatabaseModel.book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="borrower">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="borrower" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__book__format__1FCDBCEB">
+    <End Role="format" Type="BooksDatabaseModel.format" Multiplicity="0..1" />
+    <End Role="book" Type="BooksDatabaseModel.book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="format">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="format" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__book__genre__20C1E124">
+    <End Role="genre" Type="BooksDatabaseModel.genre" Multiplicity="0..1" />
+    <End Role="book" Type="BooksDatabaseModel.book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genre">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="genre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__book__owner__22AA2996">
+    <End Role="user" Type="BooksDatabaseModel.user" Multiplicity="0..1" />
+    <End Role="book" Type="BooksDatabaseModel.book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="owner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="books_genres">
+    <End Role="book" Type="BooksDatabaseModel.book" Multiplicity="*" />
+    <End Role="genre" Type="BooksDatabaseModel.genre" Multiplicity="*" />
+  </Association>
+</Schema>

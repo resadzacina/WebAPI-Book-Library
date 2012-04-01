@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BooksDatabaseModelStoreContainer" CdmEntityContainer="BooksDatabaseEntities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country_iso" ColumnName="country_iso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="authors">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.author">
+        <MappingFragment StoreEntitySet="author">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="country_iso" ColumnName="country_iso" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="books">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.book">
+        <MappingFragment StoreEntitySet="book">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="pages" ColumnName="pages" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="format" ColumnName="format" />
+          <ScalarProperty Name="genre" ColumnName="genre" />
+          <ScalarProperty Name="borrower" ColumnName="borrower" />
+          <ScalarProperty Name="borrowed" ColumnName="borrowed" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="extra" ColumnName="extra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="borrowers">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.borrower">
+        <MappingFragment StoreEntitySet="borrower">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.Country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="iso" ColumnName="iso" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="printable_name" ColumnName="printable_name" />
+          <ScalarProperty Name="iso3" ColumnName="iso3" />
+          <ScalarProperty Name="numcode" ColumnName="numcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employers">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.employer">
+        <MappingFragment StoreEntitySet="employer">
+          <ScalarProperty Name="employer_id" ColumnName="employer_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="formats">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.format">
+        <MappingFragment StoreEntitySet="format">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genres">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.genre">
+        <MappingFragment StoreEntitySet="genre">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="options">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.option">
+        <MappingFragment StoreEntitySet="options">
+          <ScalarProperty Name="options_id" ColumnName="options_id" />
+          <ScalarProperty Name="option_one" ColumnName="option_one" />
+          <ScalarProperty Name="option_two" ColumnName="option_two" />
+          <ScalarProperty Name="option_three" ColumnName="option_three" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pages">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.page">
+        <MappingFragment StoreEntitySet="pages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="display_value" ColumnName="display_value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.Role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="display_value" ColumnName="display_value" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="modified_date" ColumnName="modified_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles_pages">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.roles_pages">
+        <MappingFragment StoreEntitySet="roles_pages">
+          <ScalarProperty Name="role_fk" ColumnName="role_fk" />
+          <ScalarProperty Name="page_fk" ColumnName="page_fk" />
+          <ScalarProperty Name="edit_flag" ColumnName="edit_flag" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="BooksDatabaseModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="fav_cat" ColumnName="fav_cat" />
+          <ScalarProperty Name="fav_book" ColumnName="fav_book" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="country_iso" ColumnName="country_iso" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="opt_in" ColumnName="opt_in" />
+          <ScalarProperty Name="license_id" ColumnName="license_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="books_genres" TypeName="BooksDatabaseModel.books_genres" StoreEntitySet="books_genres">
+      <EndProperty Name="book">
+        <ScalarProperty Name="id" ColumnName="book_id" />
+      </EndProperty>
+      <EndProperty Name="genre">
+        <ScalarProperty Name="id" ColumnName="genre_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

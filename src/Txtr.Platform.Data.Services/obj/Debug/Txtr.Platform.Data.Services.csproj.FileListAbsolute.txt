@@ -1,0 +1,9 @@
+C:\Development\Txtr\Txtr.Platform.Data.Services\obj\Debug\Txtr.Platform.Data.Services.csprojResolveAssemblyReference.cache
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.Services.dll
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.Services.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.Core.dll
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.DomainModel.dll
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.Core.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Services\bin\Debug\Txtr.Platform.Data.DomainModel.pdb
+C:\Development\Txtr\Txtr.Platform.Data.Services\obj\Debug\Txtr.Platform.Data.Services.dll
+C:\Development\Txtr\Txtr.Platform.Data.Services\obj\Debug\Txtr.Platform.Data.Services.pdb
