@@ -1,17 +1,16 @@
 Software Requirements:
 
-Visual Studio 2011
+Visual Studio 2011 Beta
 SQL Server Express 2008 R2
 
-Install:
+Installation:
 
-Intall SQL Server DB - Run script named baseline_create_script.sql
-Configure "*.WebService.Web" project Web.Config to use the right connection string
+- Create SQL Server DB - Run script named baseline_create_script.sql from database folder
+- Configure "*.WebService.Web" project Web.Config to point to the correct server and database
+- The connection string that must be configured is named "BooksDatabaseEntities"
+- "*.WebService.Web" must be set as the startup project
 
-Configure:
+Usage:
 
-"*.WebService.Web" must be set as the startup project
-
-Run:
-
-Run the "*.WebService.Web" project and navigate the REST API through the browser!
+- Run the "*.WebService.Web" project and navigate the REST API through the browser!
+- Some additional usage scenarios are described on the home page of the app
