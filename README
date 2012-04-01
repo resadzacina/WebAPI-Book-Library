@@ -6,7 +6,7 @@ SQL Server Express 2008 R2
 Install:
 
 Intall SQL Server DB - Run script named baseline_create_script.sql
-Configure "*.WebService.Web" project Web.Config in th to use the right connection string
+Configure "*.WebService.Web" project Web.Config to use the right connection string
 
 Configure:
 
@@ -14,4 +14,4 @@ Configure:
 
 Run:
 
-Run the "*.WebService.Web" project and use navigate the REST API through the browser!
+Run the "*.WebService.Web" project and navigate the REST API through the browser!
