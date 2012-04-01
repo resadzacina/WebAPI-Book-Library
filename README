@@ -3,10 +3,15 @@ Software Requirements:
 Visual Studio 2011
 SQL Server Express 2008 R2
 
-Configuration:
-
-Web must be set as the startup project
-
-Installation:
+Install:
 
 Intall SQL Server DB - Run script named baseline_create_script.sql
+Configure "*.WebService.Web" project Web.Config in th to use the right connection string
+
+Configure:
+
+"*.WebService.Web" must be set as the startup project
+
+Run:
+
+Run the "*.WebService.Web" project and use navigate the REST API through the browser!
