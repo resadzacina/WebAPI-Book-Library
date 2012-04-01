@@ -1,0 +1,12 @@
+Software Requirements:
+
+Visual Studio 2011
+SQL Server Express 2008 R2
+
+Configuration:
+
+Web must be set as the startup project
+
+Installation:
+
+Intall SQL Server DB - Run script named baseline_create_script.sql
